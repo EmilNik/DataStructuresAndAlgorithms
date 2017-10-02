@@ -4,7 +4,7 @@
 
     Stack
         ✓ Stack with array
-        ✖ Stack with linked list
+        ✓ Stack with linked list
     Queue
         ✖ Queue with array
         ✖ Queue with linked list
