@@ -63,7 +63,6 @@ void Stack<T>::Top(T& x)
 	else
 	{
 		cout << "The stack is empty.\n";
-		exit(1);
 	}
 }
 
@@ -79,11 +78,10 @@ void Stack<T>::Push(const T& x)
 	else
 	{
 		cout << "The stack is full.\n";
-		exit(1);
 	}
 }
 
-// Removes the top element of stack and writes it into x
+// Removes the top element of stack and saves it into x
 template <typename T>
 void Stack<T>::Pop(T& x)
 {
@@ -95,7 +93,6 @@ void Stack<T>::Pop(T& x)
 	else
 	{
 		cout << "The stack is empty.\n";
-		exit(1);
 	}
 }
 
