@@ -10,10 +10,10 @@ public:
 	bool IsEmpty();
 	void Push(T&);
 	void Pop(T&);
-	void Top(T&);
+	void Head(T&);
 	void Print();
 private:
-	Node<T> *first;
-	Node<T> *last;
+	Node<T> *front;
+	Node<T> *rear;
 	void DeleteQueue();
 };

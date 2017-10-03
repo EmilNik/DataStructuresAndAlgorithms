@@ -7,7 +7,7 @@ using namespace std;
 template <typename T>
 Queue<T>::Queue()
 {
-	first = last = NULL;
+	front = rear = NULL;
 }
 
 template <typename T>
@@ -19,7 +19,7 @@ Queue<T>::~Queue()
 template <typename T>
 bool Queue<T>::IsEmpty()
 {
-	return last == NULL;
+	return rear == NULL;
 }
 
 template <typename T>
@@ -30,13 +30,13 @@ void Queue<T>::Push(T& x)
 	node->next = NULL;
 	if (IsEmpty())
 	{
-		first = node;
+		front = node;
 	}
 	else
 	{
-		last->next = node;
+		rear->next = node;
 	}
-	last = node;
+	rear = node;
 }
 
 template <typename T>
@@ -44,16 +44,16 @@ void Queue<T>::Pop(T& x)
 {
 	if (!IsEmpty())
 	{
-		Node<T> *node = first;
+		Node<T> *node = front;
 		x = node->data;
-		if (node == last)
+		if (node == rear)
 		{
-			last = NULL;
-			first = NULL;
+			rear = NULL;
+			front = NULL;
 		}
 		else
 		{
-			first = node->next;
+			front = node->next;
 		}
 
 		delete node;
@@ -65,11 +65,11 @@ void Queue<T>::Pop(T& x)
 }
 
 template <typename T>
-void Queue<T>::Top(T& x)
+void Queue<T>::Head(T& x)
 {
 	if (!IsEmpty())
 	{
-		x = first->data;
+		x = front->data;
 	}
 	else
 	{

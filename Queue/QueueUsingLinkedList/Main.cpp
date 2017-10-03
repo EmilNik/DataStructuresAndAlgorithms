@@ -17,7 +17,7 @@ int main()
 		}
 		else if (i % 11 == 0)
 		{
-			queue.Top(number);
+			queue.Head(number);
 			cout << number << endl;
 		}
 	}
