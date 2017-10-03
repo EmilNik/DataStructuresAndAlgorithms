@@ -6,7 +6,7 @@
         ✓ Stack with array
         ✓ Stack with linked list
     Queue
-        ✖ Queue with array
+        ✓ Queue with array
         ✖ Queue with linked list
     ✖ Linked List
     Tree
