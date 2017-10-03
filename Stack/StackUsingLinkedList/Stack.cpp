@@ -41,7 +41,7 @@ bool Stack<T>::IsEmpty()
 
 // Adds x in stack
 template <typename T>
-void Stack<T>::Push(const T& x)
+void Stack<T>::Push(T& x)
 {
 	Node<T>* n = start;
 	start = new Node<T>;

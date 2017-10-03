@@ -28,7 +28,7 @@ Queue<T>::Queue(int size = MAXSIZE)
 template <typename T>
 Queue<T>::~Queue()
 {
-	deleteQueue();
+	DeleteQueue();
 }
 
 template <typename T>
@@ -44,7 +44,7 @@ bool Queue<T>::IsFull()
 }
 
 template <typename T>
-void Queue<T>::Push(const T& x)
+void Queue<T>::Push(T& x)
 {
 	if (!IsFull())
 	{

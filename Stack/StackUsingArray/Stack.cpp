@@ -68,7 +68,7 @@ void Stack<T>::Top(T& x)
 
 // Adds x in stack
 template <typename T>
-void Stack<T>::Push(const T& x)
+void Stack<T>::Push(T& x)
 {
 	if (!IsFull())
 	{

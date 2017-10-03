@@ -8,7 +8,7 @@ public:
 	Stack();
 	~Stack();
 	bool IsEmpty();
-	void Push(const T&);
+	void Push(T&);
 	void Pop(T&);
 	void Top(T&);
 	void Print();
