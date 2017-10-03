@@ -1,7 +1,7 @@
 #pragma once
-template <typename T>
+template <typename T = int>
 struct Node
 {
 	T data;
-	Node* next;
+	Node<T>* next;
 };
