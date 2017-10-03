@@ -14,7 +14,7 @@ public:
 	void Print();
 private:
 	T* arr;
-	void deleteQueue();
+	void DeleteQueue();
 	int queueSize;
 	int first;
 	int last;

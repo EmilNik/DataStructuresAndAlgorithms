@@ -33,7 +33,7 @@ Stack<T>::~Stack()
 
 // Deletes stack
 template <typename T>
-void Stack<T>::deleteStack()
+void Stack<T>::DeleteStack()
 {
 	delete[] arr;
 }

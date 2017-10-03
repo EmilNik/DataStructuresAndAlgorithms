@@ -18,5 +18,5 @@ private:
 	int stackSize;
 	int stackTop;
 	T* arr;
-	void deleteStack();
+	void DeleteStack();
 };

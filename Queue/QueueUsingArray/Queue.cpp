@@ -101,7 +101,7 @@ void Queue<T>::Print()
 }
 
 template <typename T>
-void Queue<T>::deleteQueue() 
+void Queue<T>::DeleteQueue() 
 {
 	delete[] arr;
 }
