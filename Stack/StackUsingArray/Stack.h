@@ -6,6 +6,8 @@ public:
 	// Канонично представяне
 	Stack(int);
 	~Stack();
+	Stack(const Stack<T>&);
+	Stack<T>& operator=(const Stack<T>&);
 
 	// Основни операции
 	bool IsEmpty();

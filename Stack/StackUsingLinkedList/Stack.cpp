@@ -23,7 +23,7 @@ Stack<T>::~Stack()
 template <typename T>
 void Stack<T>::DeleteStack()
 {
-	Node<T> *n;
+	Element<T> *n;
 	while (start)
 	{
 		n = start;
@@ -43,8 +43,8 @@ bool Stack<T>::IsEmpty()
 template <typename T>
 void Stack<T>::Push(T& x)
 {
-	Node<T>* n = start;
-	start = new Node<T>;
+	Element<T>* n = start;
+	start = new Element<T>;
 	start->data = x;
 	start->next = n;
 }
@@ -56,7 +56,7 @@ void Stack<T>::Pop(T& x)
 	if (!IsEmpty())
 	{
 		x = start->data;
-		Node<T>* n = start;
+		Element<T>* n = start;
 		start = start->next;
 		delete n;
 	}
@@ -97,7 +97,7 @@ void Stack<T>::Print()
 template <typename T>
 int Stack<T>::Length()
 {
-	Node<T>* n = start;
+	Element<T>* n = start;
 	int count = 0;
 	while (n)
 	{

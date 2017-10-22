@@ -1,7 +1,7 @@
 #pragma once
 template <typename T = int>
-struct Node
+struct Element
 {
 	T data;
-	Node<T>* next;
+	Element<T>* next;
 };

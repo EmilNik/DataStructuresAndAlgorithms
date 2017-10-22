@@ -1,5 +1,5 @@
 #pragma once
-#include "Node.cpp"
+#include "Element.cpp"
 
 template <typename T = int>
 class Stack 
@@ -14,6 +14,6 @@ public:
 	void Print();
 	int Length();
 private:
-	Node<T> *start;
+	Element<T> *start;
 	void DeleteStack();
 };

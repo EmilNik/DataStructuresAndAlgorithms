@@ -4,107 +4,63 @@ using namespace std;
 
 #include "Stack.h"
 
-//Some random number?
-const int MAXSIZE = 20;
-
-// Explicit constructor
+// Параметричен конструктор
 template <typename T>
-Stack<T>::Stack(int size = MAXSIZE)
+Stack<T>::Stack(int size)
 {
-	if (size <= 0)
-	{
-		stackSize = MAXSIZE;
-	}
-	else
-	{
-		stackSize = size;
-	}
-
-	arr = new T[stackSize];
-	stackTop = -1;
 }
 
-// Destructor
+// Деструктор
 template <typename T>
 Stack<T>::~Stack()
 {
-	deleteStack();
 }
 
-// Deletes stack
+// Конструктор за присвояване
 template <typename T>
-void Stack<T>::DeleteStack()
+Stack<T>::Stack(const Stack<T>& stack)
 {
-	delete[] arr;
 }
 
-// Checks if stack is empty and returns bool
+// Оператор за присвояване
+template <typename T>
+Stack<T>& Stack<T>::operator=(const Stack<T>& stack)
+{
+
+}
+
+// Проверява дали стекът е празен и връща булева стойност
 template <typename T>
 bool Stack<T>::IsEmpty()
 {
-	return stackTop == -1;
 }
 
-// Checks if stack is full and returns bool
+// Проверява дали стекът е пълен и връща булева стойност
 template <typename T>
 bool Stack<T>::IsFull()
 {
-	return stackTop == stackSize - 1;
 }
 
-// Writes the top of the stack in x
+// Намира върха на стека, ако не е празен, и го записва в параметъра x
 template <typename T>
 void Stack<T>::Top(T& x)
 {
-	if (!IsEmpty())
-	{
-		x = arr[stackTop];
-	}
-	else
-	{
-		cout << "The stack is empty.\n";
-	}
 }
 
-// Adds x in stack
+// Добавя параметъра x в стека, ако не е пълен
 template <typename T>
 void Stack<T>::Push(T& x)
 {
-	if (!IsFull())
-	{
-		stackTop++;
-		arr[stackTop] = x;
-	}
-	else
-	{
-		cout << "The stack is full.\n";
-	}
 }
 
-// Removes the top element of stack and saves it into x
+// Изключва елемент от стека, ако не е празен, и го записва в параметъра x
 template <typename T>
 void Stack<T>::Pop(T& x)
 {
-	if (!IsEmpty())
-	{
-		x = arr[stackTop];
-		stackTop--;
-	}
-	else
-	{
-		cout << "The stack is empty.\n";
-	}
 }
 
-// Prints all elements of the stack and empties it
+// Принтира на екрана всички елементи от стека, като го разрушава
 template <typename T>
 void Stack<T>::Print()
 {
-	T x;
-	while (!IsEmpty())
-	{
-		Pop(x);
-		cout << x << " ";
-	}
-	cout << endl;
 }
