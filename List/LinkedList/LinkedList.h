@@ -8,7 +8,7 @@ public:
 	LinkedList();
 	~LinkedList();
 	LinkedList(const LinkedList&);
-	LinkedList& operator=(const LinkedList$);
+	LinkedList& operator=(const LinkedList&);
 
 	bool IsEmpty() const;
 	void IterStart(Node<T>* = NULL);
